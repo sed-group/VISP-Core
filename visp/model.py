@@ -80,7 +80,7 @@ class ValueDriver:
         return "<ValueDriver: name=%s, description=%s>" % (self.name, self.description)
 
 
-class Designsolution:
+class DesignSolution:
     def __init__(self,
                  name,
                  description):
@@ -89,7 +89,7 @@ class Designsolution:
         self.description = description
 
     def __repr__(self):
-        return "<Designsolution: name=%s, description=%s>" % (self.name, self.description)
+        return "<DesignSolution: name=%s, description=%s>" % (self.name, self.description)
 
 
 class FunctionalRequirement:
