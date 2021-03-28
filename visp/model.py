@@ -24,6 +24,22 @@ class Stakeholder:
         return "<Stakeholder: name=%s, description=%s, role=%s, organization=%s>" % (self.name, self.description, self.role, self.organization)
 
 
+class Expectation:
+    def __init__(self,
+                 name,
+                 description,
+                 stakeholder,
+                 category):
+        self.uuid = uuid.uuid4()
+        self.name = name
+        self.description = description
+        self.stakeholder = stakeholder
+        self.category = category
+
+    def __repr__(self):
+        return "<Expectation: name=%s, description=%s, stakeholder=%s, category=%s, uuid=%s>" % (self.name, self.description, self.stakeholder, self.category, self.uuid)
+
+
 class Need:
     def __init__(self,
                  name,
