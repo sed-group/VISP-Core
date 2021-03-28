@@ -154,14 +154,16 @@ class Parameter:
 
 class Interaction:
     def __init__(self,
-                 name,
-                 description):
+                 category,
+                 origin,
+                 target):
         self.uuid = uuid.uuid4()
-        self.name = name
-        self.description = description
+        self.category = category
+        self.origin = origin
+        self.target = target
 
     def __repr__(self):
-        return "<Interaction: name=%s, description=%s>" % (self.name, self.description)
+        return "<Interaction: category=%s, origin=%s, target=%s>" % (self.category, self.origin, self.target)
 
 
 class Platform:
