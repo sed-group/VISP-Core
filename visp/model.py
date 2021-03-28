@@ -21,7 +21,7 @@ class Stakeholder:
         self.organization = organization
 
     def __repr__(self):
-        return "<Stakeholder: name=%s, description=%s, role=%s, organization:%s>" % (self.name, self.description, self.role, self.organization)
+        return "<Stakeholder: name=%s, description=%s, role=%s, organization=%s>" % (self.name, self.description, self.role, self.organization)
 
 
 class Need:
@@ -37,7 +37,7 @@ class Need:
         self.category = category
 
     def __repr__(self):
-        return "<Need: name=%s, description=%s, stakeholder:%s, category:%s, uuid:%s>" % (self.name, self.description, self.stakeholder, self.category, self.uuid)
+        return "<Need: name=%s, description=%s, stakeholder=%s, category=%s, uuid=%s>" % (self.name, self.description, self.stakeholder, self.category, self.uuid)
 
 
 class NeedCategory:
@@ -49,7 +49,7 @@ class NeedCategory:
         self.description = description
 
     def __repr__(self):
-        return "<NeedCategory: name=%s, description=%s>" % (self.name, self.description)
+        return "<NeedCategory= name=%s, description=%s>" % (self.name, self.description)
 
 
 class ValueDriver:
