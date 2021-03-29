@@ -10,10 +10,10 @@ class Model():
 
 class Stakeholder:
     def __init__(self,
-                 name,
-                 description,
-                 role,
-                 organization):
+                 name: str,
+                 description: str = None,
+                 role: str = None,
+                 organization: str = None):
         self.uuid = uuid.uuid4()
         self.name = name
         self.description = description
@@ -27,9 +27,9 @@ class Stakeholder:
 class Expectation:
     def __init__(self,
                  name,
-                 description,
-                 stakeholder,
-                 category):
+                 description=None,
+                 stakeholder=None,
+                 category=None):
         self.uuid = uuid.uuid4()
         self.name = name
         self.description = description
@@ -43,9 +43,9 @@ class Expectation:
 class Need:
     def __init__(self,
                  name,
-                 description,
-                 stakeholder,
-                 category):
+                 description=None,
+                 stakeholder=None,
+                 category=None):
         self.uuid = uuid.uuid4()
         self.name = name
         self.description = description
@@ -59,7 +59,7 @@ class Need:
 class NeedCategory:
     def __init__(self,
                  name,
-                 description):
+                 description=None):
         self.uuid = uuid.uuid4()
         self.name = name
         self.description = description
@@ -71,7 +71,7 @@ class NeedCategory:
 class ValueDriver:
     def __init__(self,
                  name,
-                 description):
+                 description=None):
         self.uuid = uuid.uuid4()
         self.name = name
         self.description = description
@@ -83,7 +83,7 @@ class ValueDriver:
 class DesignSolution:
     def __init__(self,
                  name,
-                 description):
+                 description=None):
         self.uuid = uuid.uuid4()
         self.name = name
         self.description = description
@@ -95,7 +95,7 @@ class DesignSolution:
 class FunctionalRequirement:
     def __init__(self,
                  name,
-                 description):
+                 description=None):
         self.uuid = uuid.uuid4()
         self.name = name
         self.description = description
@@ -107,7 +107,7 @@ class FunctionalRequirement:
 class Constraint:
     def __init__(self,
                  name,
-                 description):
+                 description=None):
         self.uuid = uuid.uuid4()
         self.name = name
         self.description = description
@@ -119,7 +119,7 @@ class Constraint:
 class ProductProject:
     def __init__(self,
                  name,
-                 description):
+                 description=None):
         self.uuid = uuid.uuid4()
         self.name = name
         self.description = description
@@ -131,7 +131,7 @@ class ProductProject:
 class ConfigurableComponent:
     def __init__(self,
                  name,
-                 description):
+                 description=None):
         self.uuid = uuid.uuid4()
         self.name = name
         self.description = description
@@ -143,10 +143,18 @@ class ConfigurableComponent:
 class Parameter:
     def __init__(self,
                  name,
-                 description):
+                 description=None,
+                 parameter_type=None,
+                 min=None,
+                 max=None,
+                 value=None):
         self.uuid = uuid.uuid4()
         self.name = name
         self.description = description
+        self.parameter_type = parameter_type,
+        self.min = min,
+        self.max = max,
+        self.value = value
 
     def __repr__(self):
         return "<Parameter: name=%s, description=%s>" % (self.name, self.description)
@@ -169,7 +177,7 @@ class Interaction:
 class Platform:
     def __init__(self,
                  name,
-                 description):
+                 description=None):
         self.uuid = uuid.uuid4()
         self.name = name
         self.description = description
