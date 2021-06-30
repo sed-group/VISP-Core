@@ -15,7 +15,7 @@ import random
 
 # import files
 
-df = pd.read_excel(r'/Users/maspan/Desktop/VISP/VISP_HUD/Surplus Value model/hud-doe.xls')  # read Inigo's file
+df = pd.read_excel(r'hud-doe.xlsx')  # read Inigo's file
 
 
 #wb=load_workbook('/Users/maspan/Desktop/VISP/VISP_HUD/Surplus Value model/Surplus Value Model_ V5.xlsx')
