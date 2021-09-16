@@ -1,0 +1,169 @@
+[{
+        "name": "pedalBody",
+        "size": {
+            "length": 50,
+            "width": 50,
+            "height": 400
+        },
+        "placement": {
+            "angle": 0,
+            "axis": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 1050,
+                "y": 0,
+                "z": -400
+            }
+        }
+    },
+    {
+        "name": "hud",
+        "size": {
+            "length": 200,
+            "width": 200,
+            "height": 200
+        },
+        "placement": {
+            "angle": 0,
+            "axis": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 1050,
+                "y": 100,
+                "z": -100
+            }
+        }
+    },
+    {
+        "name": "pedalColumnFrame",
+        "size": {
+            "length": 300,
+            "width": 50,
+            "height": 400
+        },
+        "placement": {
+            "angle": 0,
+            "axis": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 1000,
+                "y": 50,
+                "z": -300
+            }
+        }
+    },
+    {
+        "name": "crossCarBeam",
+        "size": {
+            "length": 1500,
+            "width": 50,
+            "height": 100
+        },
+        "placement": {
+            "angle": 0,
+            "axis": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 0,
+                "y": 300,
+                "z": 0
+            }
+        }
+    },
+    {
+        "name": "heater",
+        "size": {
+            "length": 600,
+            "width": 200,
+            "height": 300
+        },
+        "placement": {
+            "angle": 0,
+            "axis": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 0,
+                "y": 100,
+                "z": -200
+            }
+        }
+    },
+    {
+        "name": "bodyStructure",
+        "size": {
+            "length": 1500,
+            "width": 50,
+            "height": 100
+        },
+        "placement": {
+            "angle": 0,
+            "axis": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        }
+    },
+    {
+        "name": "windScreen",
+        "size": {
+            "length": 1400,
+            "width": 700,
+            "height": 5
+        },
+        "placement": {
+            "angle": 45,
+            "axis": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "position": {
+                "x": 0,
+                "y": -104.79,
+                "z": 197.50
+            }
+        }
+    },
+    {
+        "name": "steeringColumn",
+        "cylinder": {
+            "radius": 25,
+            "height": 600,
+            "angle": 360
+        },
+        "placement": {
+            "angle": 65,
+            "axis": {
+                "x": -1,
+                "y": 0,
+                "z": 0
+            },
+            "position": {
+                "x": 1150,
+                "y": 0,
+                "z": -300
+            }
+        }
+    }
+]

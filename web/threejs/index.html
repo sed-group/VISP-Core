@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+body {
+	margin: 0;
+	height: 100vh;
+}
+canvas {
+	display: block;
+}
+
+.stats-panel {
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+    </style>
+</head>
+<body>
+    <div>
+
+    </div>
+    <script src="./js/three.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/264161/OrbitControls.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.5/dat.gui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/r16/Stats.min.js"></script>
+    <script>
+
+var objects = [];
+
+var modelSizeX = 1;
+var modelSizeY = 1;
+var modelSizeZ = 1;
+var modelRotation = 1;
+
+const stats = new Stats();
+
+var scene = new THREE.Scene();
+
+var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+
+var renderer = new THREE.WebGLRenderer({antialias: true});
+renderer.setSize( window.innerWidth, window.innerHeight );
+renderer.setClearColor('#cccccc');
+renderer.setSize(window.innerWidth, window.innerHeight);
+document.body.appendChild( renderer.domElement );
+
+window.addEventListener('resize', () => {
+	renderer.setSize(window.innerWidth, window.innerHeight);
+	camera.aspect = window.innerWidth / window.innerHeight;
+	camera.updateProjectionMatrix();
+});
+
+var geometry = new THREE.BoxGeometry(modelSizeX, modelSizeY, modelSizeZ);
+var material = new THREE.MeshLambertMaterial({color: 0xff0000});
+var mesh = new THREE.Mesh(geometry, material);
+scene.add(mesh);
+objects.push(mesh);
+
+camera.position.z = 5;
+
+var light = new THREE.PointLight(0xFFFFFF, 1, 500);
+light.position.set(10, 0, 25);
+scene.add(light);
+const ambientLight = new THREE.AmbientLight(color=0xFFFFFF, intensity=0.5);
+scene.add(ambientLight);
+
+renderer.render(scene, camera);
+
+// Orbit Controls
+controls = new THREE.OrbitControls(camera, renderer.domElement);
+
+var renderLoop = () => {
+	stats.begin();
+	requestAnimationFrame(renderLoop);
+	renderer.render(scene, camera);
+    controls.update();
+	stats.end();
+};
+renderLoop();
+
+// GUI control
+
+stats.showPanel(0);
+stats.domElement.classList.add('stats-panel');
+document.body.appendChild(stats.domElement);
+
+var controlsGUI = new function() {
+    this.modelSizeX = modelSizeX;
+    this.modelSizeY = modelSizeY;
+    this.modelSizeZ = modelSizeZ;
+    this.modelRotation = modelRotation;
+  
+    this.mainChange = function() {
+    
+        modelSizeX = controlsGUI.modelSizeX;
+        modelSizeY = controlsGUI.modelSizeY;
+        modelSizeZ = controlsGUI.modelSizeZ;
+        modelRotation = controlsGUI.modelRotation;
+        mesh.scale.x = modelSizeX;
+        mesh.scale.y = modelSizeY;
+        mesh.scale.z = modelSizeZ;
+        mesh.rotation.y = modelRotation;
+    }
+}
+
+var gui = new dat.GUI();
+
+gui.add(controlsGUI, "modelSizeX", 0, 8).step(.1).onChange(controlsGUI.mainChange);
+gui.add(controlsGUI, "modelSizeY", 0, 8).step(.1).onChange(controlsGUI.mainChange);
+gui.add(controlsGUI, "modelSizeZ", 0, 8).step(.1).onChange(controlsGUI.mainChange);
+gui.add(controlsGUI, "modelRotation", 0, 6.283).step(0.01).onChange(controlsGUI.mainChange);
+
+
+
+// Select with mouse
+document.addEventListener( 'mousedown', onDocumentMouseDown );
+
+function onDocumentMouseDown( event ) {    
+    event.preventDefault();
+    var mouse3D = new THREE.Vector3( ( event.clientX / window.innerWidth ) * 2 - 1,   
+                            -( event.clientY / window.innerHeight ) * 2 + 1, 0.5 );     
+    var raycaster =  new THREE.Raycaster();                                        
+    raycaster.setFromCamera( mouse3D, camera );
+    var intersects = raycaster.intersectObjects( objects );
+console.log(intersects)
+    if ( intersects.length > 0 ) {
+        intersects[ 0 ].object.material.color.setHex( Math.random() * 0xffffff );
+    }
+}
+
+    </script>
+</body>
+</html>
