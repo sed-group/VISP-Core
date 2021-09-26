@@ -1,5 +1,6 @@
 [{
         "name": "pedalBody",
+        "color": "green",
         "size": {
             "length": 50,
             "width": 50,
@@ -21,6 +22,7 @@
     },
     {
         "name": "hud",
+        "color": "red",
         "size": {
             "length": 200,
             "width": 200,
@@ -42,6 +44,7 @@
     },
     {
         "name": "pedalColumnFrame",
+        "color": "blue",
         "size": {
             "length": 300,
             "width": 50,
@@ -63,6 +66,7 @@
     },
     {
         "name": "crossCarBeam",
+        "color": "yellow",
         "size": {
             "length": 1500,
             "width": 50,
@@ -84,6 +88,7 @@
     },
     {
         "name": "heater",
+        "color": "pink",
         "size": {
             "length": 600,
             "width": 200,
@@ -105,6 +110,7 @@
     },
     {
         "name": "bodyStructure",
+        "color": "gray",
         "size": {
             "length": 1500,
             "width": 50,
@@ -126,6 +132,7 @@
     },
     {
         "name": "windScreen",
+        "color": "cyan",
         "size": {
             "length": 1400,
             "width": 700,
@@ -147,6 +154,7 @@
     },
     {
         "name": "steeringColumn",
+        "color": "black",
         "cylinder": {
             "radius": 25,
             "height": 600,
