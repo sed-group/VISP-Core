@@ -1,6 +1,6 @@
 import plotly.express as px
 from doepy import build
-from hud import volume
+import volume
 
 factors_ar = {
     'FullHorizontalFOV': [5, 15],
@@ -15,6 +15,7 @@ factors_ar = {
 num_samples = 1000
 
 lhs = build.space_filling_lhs(factors_ar, num_samples=num_samples)
+print(lhs)
 
 for index, row in lhs.iterrows():
     inputs = {
@@ -31,8 +32,8 @@ for index, row in lhs.iterrows():
         "PGUVolumeEstimate": 0.5
     }
 
-    volume = volume.TotalMechanicalVolumeOfHUD(inputs)
-    lhs.at[index, 'volume'] = volume
+    totalVolume = volume.TotalMechanicalVolumeOfHUD(inputs)
+    lhs.at[index, 'volume'] = totalVolume
 
 
 df = lhs
