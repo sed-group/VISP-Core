@@ -1,0 +1,27 @@
+[
+{
+    "id": 1,
+    "name": "(2G) HUD",
+    "date": "2018-01-01",
+    "volume": {
+        "min": 3,
+        "max": 11,
+        "avg": 7.5
+    },
+    "imageSize": {
+        "min": 3,
+        "max": 11,
+        "avg": 7.5
+    },
+    "imageDistance": {
+        "min": 3,
+        "max": 11,
+        "avg": 7.5
+    },
+    "FoVH": 12.50,
+    "FoVV": 12.50,
+    "TRL": 12.50,
+    "cost": 12.50,
+    "tags": [ "home", "green" ]
+}
+]
