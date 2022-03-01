@@ -1,9 +1,57 @@
-[
-    {
-        "uuid": "",
-        "name": "",
+[{
+        "id": 1,
+        "type": "internal",
+        "role": "Product Owner",
+        "organization": "",
         "description": "",
-        "role": "",
-        "organization": ""
+        "needs": []
+    },
+    {
+        "id": 2,
+        "type": "internal",
+        "role": "Safety",
+        "organization": "",
+        "description": "",
+        "needs": []
+    },
+    {
+        "id": 3,
+        "type": "internal",
+        "role": "Cockpit Integration",
+        "organization": "",
+        "description": "",
+        "needs": []
+    },
+    {
+        "id": 4,
+        "type": "internal",
+        "role": "Windscreen",
+        "organization": "",
+        "description": "",
+        "needs": []
+    },
+    {
+        "id": 5,
+        "type": "internal",
+        "role": "Mechanical Integration",
+        "organization": "",
+        "description": "",
+        "needs": []
+    },
+    {
+        "id": 6,
+        "type": "internal",
+        "role": "Ergonomics",
+        "organization": "",
+        "description": "",
+        "needs": []
+    },
+    {
+        "id": 7,
+        "type": "internal",
+        "role": "Solidity",
+        "organization": "",
+        "description": "",
+        "needs": []
     }
 ]

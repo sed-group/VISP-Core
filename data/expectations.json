@@ -1,0 +1,266 @@
+[{
+        "id": 1,
+        "type": "internal",
+        "stakeholders": "Product Owner",
+        "name": "Safety priority #1",
+        "description": ""
+    },
+    {
+        "id": 2,
+        "type": "internal",
+        "stakeholders": "Safety",
+        "name": "No interference with steering wheel ride-down",
+        "description": ""
+    },
+    {
+        "id": 3,
+        "type": "internal",
+        "stakeholders": "Cockpit Integration",
+        "name": "No interference with steering wheel ride-down",
+        "description": ""
+    },
+    {
+        "id": 4,
+        "type": "internal",
+        "stakeholders": "Safety",
+        "name": "No firewall intrusion",
+        "description": ""
+    },
+    {
+        "id": 5,
+        "type": "internal",
+        "stakeholders": "Cockpit Integration",
+        "name": "No firewall intrusion",
+        "description": ""
+    },
+    {
+        "id": 6,
+        "type": "internal",
+        "stakeholders": "Safety",
+        "name": "HUD to be deformable/crushable",
+        "description": ""
+    },
+    {
+        "id": 7,
+        "type": "internal",
+        "stakeholders": "Safety",
+        "name": "Cross car beam design respected",
+        "description": ""
+    },
+    {
+        "id": 8,
+        "type": "internal",
+        "stakeholders": "Safety",
+        "name": "Attachment as high as possible",
+        "description": ""
+    },
+    {
+        "id": 9,
+        "type": "internal",
+        "stakeholders": "Product Owner",
+        "name": "Keep or reduce the volume",
+        "description": ""
+    },
+    {
+        "id": 10,
+        "type": "internal",
+        "stakeholders": "Product Owner",
+        "name": "Better packaging",
+        "description": ""
+    },
+    {
+        "id": 11,
+        "type": "internal",
+        "stakeholders": "Windscreen",
+        "name": "Maximize interior space",
+        "description": ""
+    },
+    {
+        "id": 12,
+        "type": "internal",
+        "stakeholders": "Mechanical Integration",
+        "name": "Integratable",
+        "description": ""
+    },
+    {
+        "id": 13,
+        "type": "internal",
+        "stakeholders": "Cockpit Integration",
+        "name": "Easier assembly",
+        "description": ""
+    },
+    {
+        "id": 14,
+        "type": "internal",
+        "stakeholders": "Cockpit Integration",
+        "name": "Easier serviceability (not having to take out the whole IP?)",
+        "description": ""
+    },
+    {
+        "id": 15,
+        "type": "internal",
+        "stakeholders": "Product Owner",
+        "name": "Reserve space for future add-ons in the area",
+        "description": ""
+    },
+    {
+        "id": 16,
+        "type": "internal",
+        "stakeholders": "Mechanical Integration",
+        "name": "More information displayed",
+        "description": ""
+    },
+    {
+        "id": 17,
+        "type": "internal",
+        "stakeholders": "Cockpit Integration",
+        "name": "Bigger FoV",
+        "description": ""
+    },
+    {
+        "id": 18,
+        "type": "internal",
+        "stakeholders": "Ergonomics",
+        "name": "Bigger FoV",
+        "description": ""
+    },
+    {
+        "id": 19,
+        "type": "internal",
+        "stakeholders": "Windscreen",
+        "name": "No image problems (ghost image, dripping image, double image)",
+        "description": ""
+    },
+    {
+        "id": 20,
+        "type": "internal",
+        "stakeholders": "Cockpit Integration",
+        "name": "No reflections",
+        "description": ""
+    },
+    {
+        "id": 21,
+        "type": "internal",
+        "stakeholders": "Cockpit Integration",
+        "name": "No reflections",
+        "description": ""
+    },
+    {
+        "id": 22,
+        "type": "internal",
+        "stakeholders": "Ergonomics",
+        "name": "No glare, nor veiling glare",
+        "description": ""
+    },
+    {
+        "id": 23,
+        "type": "internal",
+        "stakeholders": "Windscreen",
+        "name": "Reduce highlight patterns",
+        "description": ""
+    },
+    {
+        "id": 24,
+        "type": "internal",
+        "stakeholders": "Cockpit Integration",
+        "name": "Increased luminance (use in bright light and/or with sunglasses)",
+        "description": ""
+    },
+    {
+        "id": 25,
+        "type": "internal",
+        "stakeholders": "Cockpit Integration",
+        "name": "Stable image (no vibrations)",
+        "description": ""
+    },
+    {
+        "id": 26,
+        "type": "internal",
+        "stakeholders": "Mechanical Integration",
+        "name": "Collimated image (viewed as further away, no need to refocus eyes)",
+        "description": ""
+    },
+    {
+        "id": 27,
+        "type": "internal",
+        "stakeholders": "Windscreen",
+        "name": "Prefer direct projection to using mirrors",
+        "description": ""
+    },
+    {
+        "id": 28,
+        "type": "internal",
+        "stakeholders": "Ergonomics",
+        "name": "Image visible for all drivers in the specification",
+        "description": ""
+    },
+    {
+        "id": 29,
+        "type": "internal",
+        "stakeholders": "Ergonomics",
+        "name": "Very adaptable",
+        "description": ""
+    },
+    {
+        "id": 30,
+        "type": "internal",
+        "stakeholders": "Ergonomics",
+        "name": "Easier to adjust",
+        "description": ""
+    },
+    {
+        "id": 31,
+        "type": "internal",
+        "stakeholders": "Cockpit Integration",
+        "name": "Design language respected",
+        "description": ""
+    },
+    {
+        "id": 32,
+        "type": "internal",
+        "stakeholders": "Windscreen",
+        "name": "Design language respected",
+        "description": ""
+    },
+    {
+        "id": 33,
+        "type": "internal",
+        "stakeholders": "Windscreen",
+        "name": "Minimize exterior size",
+        "description": ""
+    },
+    {
+        "id": 34,
+        "type": "internal",
+        "stakeholders": "Windscreen",
+        "name": "Minimal aerodynamic impact",
+        "description": ""
+    },
+    {
+        "id": 35,
+        "type": "internal",
+        "stakeholders": "Cockpit Integration",
+        "name": "Minimize current consumption",
+        "description": ""
+    },
+    {
+        "id": 36,
+        "type": "internal",
+        "stakeholders": "Windscreen",
+        "name": "No more constraints for the WS shape design",
+        "description": ""
+    },
+    {
+        "id": 37,
+        "type": "internal",
+        "stakeholders": "Windscreen",
+        "name": "Early requirements for the design of the windscreen",
+        "description": ""
+    },
+    {
+        "id": 38,
+        "type": "internal",
+        "stakeholders": "Solidity",
+        "name": "No internal nor external rattling or squeaking"
+    }
+]

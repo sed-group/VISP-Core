@@ -1,0 +1,39 @@
+id;Type;Stakeholder;Stakeholder Expectation
+1;internal;Product Owner;Safety priority #1
+2;internal;Safety;No interference with steering wheel ride-down
+3;internal;Cockpit Integration;No interference with steering wheel ride-down
+4;internal;Safety;No firewall intrusion
+5;internal;Cockpit Integration;No firewall intrusion
+6;internal;Safety;HUD to be deformable/crushable
+7;internal;Safety;Cross car beam design respected
+8;internal;Safety;Attachment as high as possible
+9;internal;Product Owner;Keep or reduce the volume
+10;internal;Product Owner;Better packaging
+11;internal;Windscreen;Maximize interior space
+12;internal;Mechanical Integration;Integratable
+13;internal;Cockpit Integration;Easier assembly
+14;internal;Cockpit Integration;Easier serviceability (not having to take out the whole IP?)
+15;internal;Product Owner;Reserve space for future add-ons in the area
+16;internal;Mechanical Integration;More information displayed
+17;internal;Cockpit Integration;Bigger FoV
+18;internal;Ergonomics;Bigger FoV
+19;internal;Windscreen;No image problems (ghost image, dripping image, double image)
+20;internal;Cockpit Integration;No reflections
+21;internal;Cockpit Integration;No reflections
+22;internal;Ergonomics;No glare, nor veiling glare
+23;internal;Windscreen;Reduce highlight patterns
+24;internal;Cockpit Integration;Increased luminance (use in bright light and/or with sunglasses)
+25;internal;Cockpit Integration;Stable image (no vibrations)
+26;internal;Mechanical Integration;Collimated image (viewed as further away, no need to refocus eyes)
+27;internal;Windscreen;Prefer direct projection to using mirrors
+28;internal;Ergonomics;Image visible for all drivers in the specification
+29;internal;Ergonomics;Very adaptable
+30;internal;Ergonomics;Easier to adjust
+31;internal;Cockpit Integration;Design language respected
+32;internal;Windscreen;Design language respected
+33;internal;Windscreen;Minimize exterior size
+34;internal;Windscreen;Minimal aerodynamic impact
+35;internal;Cockpit Integration;Minimize current consumption
+36;internal;Windscreen;No more constraints for the WS shape design
+37;internal;Windscreen;Early requirements for the design of the windscreen
+38;internal;Solidity;No internal nor external rattling or squeaking

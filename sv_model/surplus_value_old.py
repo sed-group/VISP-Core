@@ -2,17 +2,18 @@ import pandas as pd
 import math
 import matplotlib.pyplot as plt
 import simpy
-from tqdm import tqdm  # progress bar
-
-# ## Inputs
 
 # Import data file
 
-file = r"hud-doe.xls"
+file = r'hud-doe.xls'
+print("Importing file: " + file)
 df = pd.read_excel(file)  # read Inigo's file
+print("File imported")
+
 
 # Set input data
 
+print("Setting input data")
 cost_mirror_unit = 5 / 1000  # keuro/mm^2
 
 price_vehicle = 35000 / 1000  # k€uro/vehicle
@@ -45,6 +46,7 @@ year = 2035  # year
 
 person_height = 180  # cm
 
+
 # Initialize calculated variables
 
 discrete_time = 0.01
@@ -55,13 +57,13 @@ simulation_duration = 30  # years
 
 time_between_counting = 1  # year
 
-i = 0  # for updating the sales distribution
+i = 0  # for updating the sales distrib ution
 
-
-# ## Surplus Value Model Class
+# create class for Surplus Value Model
 
 
 class SV:
+
     def __init__(self, env):
 
         self.env = env
@@ -83,12 +85,11 @@ class SV:
 
         self.cost = 0
         self.revenue = 0
-        self.net_revenue = -self.cost
+        self.net_revenue = - self.cost
         self.NPV = self.net_revenue / (1 + discount_rate) ** env.now
         self.cumulativeNPV = self.NPV
 
         # initializing data for plot
-
         self.obs_time = [env.now]
         self.cashflow_level = [self.cumulativeNPV]
 
@@ -141,7 +142,9 @@ class SV:
         # set vehilce demand
 
         # calculation of current demand
-        self.current = math.ceil(theoretical_demand * Prob_yes_1 * sales_distr[self.i])
+        self.current = math.ceil(theoretical_demand
+                                 * Prob_yes_1
+                                 * sales_distr[self.i])
 
         # set vehicles in production
 
@@ -192,7 +195,9 @@ class SV:
             # all calculations are scaled down by the discrete time
 
             # the total cost is "spread" along the production time
-            self.production_cost = self.in_production * cost_vehicle * discrete_time
+            self.production_cost = self.in_production \
+                                   * cost_vehicle \
+                                   * discrete_time
 
             self.revenue = self.in_sale * (price_vehicle) * discrete_time
 
@@ -212,40 +217,42 @@ class SV:
             yield env.timeout(discrete_time)
 
 
-# ## Calculations
-
 # Initialize list for surplus value and lyfecycle costs
 
+print("Initialize result lists")
 surplus_value = []
 
 lifecycle_costs = []
 
 # calculate engineering variables and run SV model for each option
+print("Calculate engineering variables and run SV model for each option")
 
 points = 100
 
-for j in tqdm(range(0, points)):
+for j in range(0, points):
 
-    # print("Step " + str(j+1) + " out of " + str(points), end="\r")
+    print("Step " + str(j+1) + " out of " + str(points), end="\r")
     # retrieve FoV
 
-    a = df.at[j, "FullHorizontalFOV"]
+    a = df.at[j, 'FullHorizontalFOV']
 
-    b = df.at[j, "FullVerticalFOV"]
+    b = df.at[j, 'FullVerticalFOV']
 
     # calculate % FoV
 
-    FoV = (a * b * 100) / (67 * 20)  # the maximum values are for
+    FoV = (a * b * 100) / (67 * 20)   # the maximum values are for
 
     # cost model
 
-    cost_mirror = cost_mirror_unit * df.at[j, "mirrorSize"]
+    cost_mirror = cost_mirror_unit * df.at[j, 'mirrorSize']
 
-    cost_vehicle = cost_mirror + cost_vechicle_without_HUD + assembly_cost  # euro
+    cost_vehicle = cost_mirror \
+        + cost_vechicle_without_HUD \
+        + assembly_cost  # euro
 
     # weight model
 
-    weight_hud = 0.1 * df.at[j, "volume"]  # kg
+    weight_hud = 0.1 * df.at[j, 'volume']  # kg
 
     weight_vehicle = weight_hud + weight_vehicle_without_HUD  # kg
 
@@ -253,19 +260,17 @@ for j in tqdm(range(0, points)):
 
     fuel_consumpt = weight_vehicle * math.exp(-4.7)  # km / liter
 
-    fuel_cost_year = kilometers_year / fuel_consumpt * cost_fuel  # keuro/year
+    fuel_cost_year = kilometers_year/fuel_consumpt * cost_fuel  # keuro/year
 
     # calculate demand, imported from demand.py
 
-    Lin_no__1 = (
-        400.389457364428
-        + -0.0496637629531165 * (FoV)
-        + 0.0438458326033747 * (fuel_consumpt)
-        + 3.53646955685314 * (cost_fuel * 1000)
-        + -0.0958055046356103 * (person_height)
-        + 0.0000987106990985412 * (price_vehicle * 1000)
-        + -0.193495221339535 * (year)
-    )
+    Lin_no__1 = 400.389457364428 + -0.0496637629531165 \
+        * (FoV) + 0.0438458326033747 \
+        * (fuel_consumpt) + 3.53646955685314 \
+        * (cost_fuel * 1000) + -0.0958055046356103 \
+        * (person_height) + 0.0000987106990985412 \
+        * (price_vehicle * 1000) + -0.193495221339535 \
+        * (year)
 
     Prob_yes_1 = 1 / (1 + math.exp(Lin_no__1))  # demand
 
@@ -279,14 +284,13 @@ for j in tqdm(range(0, points)):
 
     env.run(until=simulation_duration)
 
-    surplus_value.append(hud.cumulativeNPV / 1000)  # converted in million euro
+    surplus_value.append(hud.cumulativeNPV/1000)  # converted in million euro
 
-    lifecycle_costs.append(-hud.total_cost / 1000)
+    lifecycle_costs.append(-hud.total_cost/1000)
 
 print("")
-print("Finished calculations")
+print("Finisehd calculations")
 
-# ## Plotting
 
 # make tradespace plot between volume and SV
 print("Plot results")
@@ -294,18 +298,16 @@ plt.figure(num=None, figsize=(9, 6), dpi=80)
 
 for i in range(0, points):
 
-    plt.scatter(
-        df.at[i, "volume"],
-        surplus_value[i],
-        label=None,
-        s=10,
-        linewidths=1,
-        edgecolors="gray",
-    )
+    plt.scatter(df.at[i, 'volume'],
+                surplus_value[i],
+                label=None,
+                s=10,
+                linewidths=1,
+                edgecolors='gray')
 
-plt.title("Tradespace volume and SV")
-plt.xlabel("Volume [mm^2]")
-plt.ylabel("Surplus Value [M Euro]")
+plt.title('Tradespace volume and SV')
+plt.xlabel('Volume [mm^2]')
+plt.ylabel('Surplus Value [M Euro]')
 # plt.legend(bbox_to_anchor=(0.7, 0.9), loc='upper center', borderaxespad=0.)
 
 plt.show()
@@ -314,16 +316,16 @@ plt.savefig("temp.png")
 print("The end")
 
 
-"""
+'''
 
 df['Surplus Value [Meuro]'] = surplus_value
 
 df['Lifecycle costs [Meuro]'] = lifecycle_costs
 
-"""
+'''
 
 
-"""
+'''
 #plot surplus value curves
 
 plt.figure(figsize=(9, 6), dpi=80, facecolor='w', edgecolor='k')
@@ -343,4 +345,4 @@ plt.ylabel('Surplus Value (kEuro)')
 plt.legend(loc='upper left')
 plt.show()
 
-"""
+'''

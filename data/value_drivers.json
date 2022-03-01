@@ -1,0 +1,225 @@
+[{
+        "id": 1,
+        "name": "Clashes with steering wheel ride-down",
+        "description": "",
+        "consequences": "",
+        "examples": "",
+        "parameters": ""
+    },
+    {
+        "id": 2,
+        "name": "Firewall intrusions",
+        "description": "",
+        "consequences": "",
+        "examples": "",
+        "parameters": ""
+    },
+    {
+        "id": 3,
+        "name": "Unit deformability",
+        "description": "",
+        "consequences": "",
+        "examples": "",
+        "parameters": ""
+    },
+    {
+        "id": 4,
+        "name": "Attachment position",
+        "description": "",
+        "consequences": "",
+        "examples": "",
+        "parameters": ""
+    },
+    {
+        "id": 5,
+        "name": "Unit volume",
+        "description": "",
+        "consequences": "",
+        "examples": "",
+        "parameters": ""
+    },
+    {
+        "id": 6,
+        "name": "Accessibility",
+        "description": "",
+        "consequences": "",
+        "examples": "",
+        "parameters": ""
+    },
+    {
+        "id": 7,
+        "name": "Inspectability",
+        "description": "",
+        "consequences": "",
+        "examples": "",
+        "parameters": ""
+    },
+    {
+        "id": 8,
+        "name": "Reparability",
+        "description": "",
+        "consequences": "",
+        "examples": "",
+        "parameters": ""
+    },
+    {
+        "id": 9,
+        "name": "Maintenance complexity",
+        "description": "",
+        "consequences": "",
+        "examples": "",
+        "parameters": ""
+    },
+    {
+        "id": 10,
+        "name": "Updatability",
+        "description": "",
+        "consequences": "",
+        "examples": "",
+        "parameters": ""
+    },
+    {
+        "id": 11,
+        "name": "Field of View (FoV)",
+        "description": "",
+        "consequences": "",
+        "examples": "",
+        "parameters": ""
+    },
+    {
+        "id": 12,
+        "name": "Eyebox size",
+        "description": "",
+        "consequences": "",
+        "examples": "",
+        "parameters": ""
+    },
+    {
+        "id": 13,
+        "name": "Reflections/Glare",
+        "description": "",
+        "consequences": "",
+        "examples": "",
+        "parameters": ""
+    },
+    {
+        "id": 14,
+        "name": "Image contrast",
+        "description": "",
+        "consequences": "",
+        "examples": "",
+        "parameters": ""
+    },
+    {
+        "id": 15,
+        "name": "Image sharpness",
+        "description": "",
+        "consequences": "",
+        "examples": "",
+        "parameters": ""
+    },
+    {
+        "id": 16,
+        "name": "Windscreen optical parameters",
+        "description": "",
+        "consequences": "",
+        "examples": "",
+        "parameters": ""
+    },
+    {
+        "id": 17,
+        "name": "Projector brightness",
+        "description": "",
+        "consequences": "",
+        "examples": "",
+        "parameters": ""
+    },
+    {
+        "id": 18,
+        "name": "Attachment dampening",
+        "description": "",
+        "consequences": "",
+        "examples": "",
+        "parameters": ""
+    },
+    {
+        "id": 19,
+        "name": "Projected View distance",
+        "description": "",
+        "consequences": "",
+        "examples": "",
+        "parameters": ""
+    },
+    {
+        "id": 20,
+        "name": "Eyebox position",
+        "description": "",
+        "consequences": "",
+        "examples": "",
+        "parameters": ""
+    },
+    {
+        "id": 21,
+        "name": "User height range",
+        "description": "",
+        "consequences": "",
+        "examples": "",
+        "parameters": ""
+    },
+    {
+        "id": 22,
+        "name": "External materials",
+        "description": "",
+        "consequences": "",
+        "examples": "",
+        "parameters": ""
+    },
+    {
+        "id": 23,
+        "name": "External shape",
+        "description": "",
+        "consequences": "",
+        "examples": "",
+        "parameters": ""
+    },
+    {
+        "id": 24,
+        "name": "Windscreen shape",
+        "description": "",
+        "consequences": "",
+        "examples": "",
+        "parameters": ""
+    },
+    {
+        "id": 25,
+        "name": "Electricity consumption",
+        "description": "",
+        "consequences": "",
+        "examples": "",
+        "parameters": ""
+    },
+    {
+        "id": 26,
+        "name": "Energy consumption",
+        "description": "",
+        "consequences": "",
+        "examples": "",
+        "parameters": ""
+    },
+    {
+        "id": 27,
+        "name": "Drag",
+        "description": "",
+        "consequences": "",
+        "examples": "",
+        "parameters": ""
+    },
+    {
+        "id": 28,
+        "name": "Noise",
+        "description": "",
+        "consequences": "",
+        "examples": "",
+        "parameters": ""
+    }
+]

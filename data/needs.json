@@ -1,0 +1,123 @@
+[{
+        "id": 1,
+        "name": "To put safety first",
+        "description": "",
+        "expectations": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ]
+    },
+    {
+        "id": 2,
+        "name": "To minimize volume of unit",
+        "description": "",
+        "expectations": [
+            9,
+            10,
+            11
+        ]
+    },
+    {
+        "id": 3,
+        "name": "To be easy to install and replace",
+        "description": "",
+        "expectations": [
+            12,
+            13,
+            14,
+            15
+        ]
+    },
+    {
+        "id": 4,
+        "name": "To see a bigger image",
+        "description": "",
+        "expectations": [
+            16,
+            17,
+            18
+        ]
+    },
+    {
+        "id": 5,
+        "name": "To minimize image quality issues",
+        "description": "",
+        "expectations": [
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25
+        ]
+    },
+    {
+        "id": 6,
+        "name": "To have a further projected view",
+        "description": "",
+        "expectations": [
+            26
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Less reflections? Smaller volume?",
+        "description": "",
+        "expectations": [
+            27
+        ]
+    },
+    {
+        "id": 8,
+        "name": "To be easy for all drivers to adapt to their eyebox position",
+        "description": "",
+        "expectations": [
+            28,
+            29,
+            30
+        ]
+    },
+    {
+        "id": 9,
+        "name": "To respect the brand design language",
+        "description": "",
+        "expectations": [
+            31,
+            32,
+            33
+        ]
+    },
+    {
+        "id": 10,
+        "name": "To be energy efficient",
+        "description": "",
+        "expectations": [
+            34,
+            35
+        ]
+    },
+    {
+        "id": 11,
+        "name": "To minimize constraints on the windshield",
+        "description": "",
+        "expectations": [
+            36,
+            37
+        ]
+    },
+    {
+        "id": 12,
+        "name": "To minimize noises",
+        "description": "",
+        "expectations": [
+            38
+        ]
+    }
+]
