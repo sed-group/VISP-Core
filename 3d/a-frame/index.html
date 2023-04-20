@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+</head>
+
+<body>
+
+    <script>
+        AFRAME.registerComponent("model-opacity", {
+            schema: {
+                opacity: {
+                    type: "number",
+                    default: 0.5
+                }
+            },
+            init: function () {
+                this.el.addEventListener("model-loaded", this.update.bind(this));
+            },
+            update: function () {
+                var mesh = this.el.getObject3D("mesh");
+                var data = this.data;
+                if (!mesh) {
+                    return;
+                }
+                mesh.traverse(function (node) {
+                    if (node.isMesh) {
+                        console.log(node);
+                        node.material.forEach((mtl) => {
+                            mtl.opacity = data.opacity;
+                            mtl.transparent = data.opacity < 1.0;
+                            mtl.needsUpdate = true;
+                        })
+                    }
+                });
+            }
+        });
+    </script>
+    <a-scene>
+        <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+        <!-- <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+        <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder> -->
+        <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+        <a-sky color="#55bbee"></a-sky>
+        <a-assets>
+            <a-asset-item id="v60Model" src="V60.gltf">
+            </a-asset-item>
+        </a-assets>
+        <a-entity gltf-model="#v60Model">
+            <a-animation attribute="model-opacity" dur="10000" from="1" to="0" repeat="indefinite"></a-animation>
+        </a-entity>
+    </a-scene>
+</body>
+
+</html>
